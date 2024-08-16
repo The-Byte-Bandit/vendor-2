@@ -1,13 +1,370 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face {
+  font-family: 'Aeonik';
+  src: url('./assets/fonts/AeonikTRIAL-RegularItalic.otf') format('opentype');
+  font-display:swap;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@font-face {
+  font-family: 'Aeonik-Bold';
+  src: url('./assets/fonts/AeonikTRIAL-Bold.otf') format('opentype');
+  font-display:swap;
 }
+
+@font-face {
+  font-family: 'Hornbill Personal Use';
+  src: url('./assets/fonts/hornbill-personal-use.regular.otf') format('opentype');
+  font-display:swap;
+}
+
+:root {
+  /* font family's */
+  /* --inter: 'Inter', sans-serif; */
+
+  /* text colors */
+  --text-sub: #525866;
+  --text-soft: #868C98;
+
+  /* colors */
+
+  --neutrals-whitw-50: #FFFFFF;
+  --neutrals-whitw-100: #EFEFEF;
+
+
+}
+
+/* html, body {
+  height: 100%;
+  margin: 0;
+} */
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+input::placeholder {
+  /* font-family: "Montserrat", sans-serif; */
+  color: #868C98;
+  font-size: 14px;
+}
+
+/* .homeLayout::-webkit-scrollbar {
+  display: none;
+}
+.homeLayout {
+  overflow: hidden;
+}
+
+.mainLayout::-webkit-scrollbar {
+  display: unset;
+} 
+
+.homeLayout {
+  -ms-overflow-style: none !important; 
+  scrollbar-width: none !important;  
+}
+
+.homeLayout::-webkit-scrollbar {
+  display: none !important; 
+  display: none ;  
+}
+.homeLayout {
+  overflow-x: hidden !important; 
+  scrollbar-width: none!important;
+  overflow: hidden;
+} */
+
+/* select {
+  background-color: #008000;
+  height: 1600px !important; 
+} */
+/* input::-webkit-input-placeholder { 
+  font-family: 'Inter', sans-serif;
+  color: #868C98;
+}
+input:-moz-placeholder { 
+  font-family: 'Inter', sans-serif;
+} */
+
+/* input:focus-visible {
+  outline: 2px solid crimson;
+  border-radius: 3px;
+} */
+/* body{
+  background-color: var(--neutrals-whitw-100);
+} */
+
+
+  @layer components {
+    .tracking-paragraphLarge {
+      letter-spacing: -0.015em;
+    }
+    .tracking-paragraphSmall{
+      letter-spacing: -0.006em;
+    }
+    .tracking-paragraphMedium{
+      letter-spacing: -0.011em;
+    }
+    .tracking-subheading2XSmall{
+      letter-spacing: 0.02em;
+    }
+    .tracking-subheadingXSmall{
+      letter-spacing: 0.04em;
+    }
+    .tracking-subheadingMedium{
+      letter-spacing: 0.06em
+    }
+    .tracking-labelXLarge{
+      letter-spacing: -0.015em
+    }
+
+    .label-small{
+      font-family: var(--inter);
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 20px;
+      color: var(--text-sub);
+    }
+
+    .subheading-X-small{
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 0.04em;
+    color: var(--text-soft);
+    text-align: left;
+    /* line-height: 4%; */
+  }
+  .inter{
+    font-family: 'Inter', sans-serif;
+  }
+
+  .ease-2s{
+    transition: 0.2s ease ;
+  }
+
+  .horn{
+    font-family: 'Hornbill Personal Use';
+  }
+
+  /* .active-stepper{
+    background-color: #008000;
+  } */
+  /* .progress{
+    background-color: #;
+  } */
+    
+
+  .PhoneInputCountryIconImg{
+    border-radius: 999px;
+  }
+  }
+
+  @layer utilities {
+    .shadow-custom-50 {
+      box-shadow: 0px 1px 2px 0px rgba(82, 88, 102, 0.06);
+    }
+    .shadow-custom-100{
+      box-shadow: 0px 1px 2px 0px rgba(55, 93, 251, 0.08);
+    }
+    .shadow-custom-150{
+      box-shadow: 0px 1px 2px 0px #E4E5E73D;
+    }
+    .shadow-custom-200{
+      box-shadow: 0px 1px 2px 0px #5258660F;
+    }
+    .shadow-custom-250{
+      box-shadow: 0px 2px 4px 0px #1B1C1D05;
+    }
+    .shadow-custom-300{
+      box-shadow: 0px 6px 10px 0px #1B1C1D0F;
+    }
+
+
+    .border-custom {
+      border-width: 1px; /* Customize the width as needed */
+    }
+    .image{
+      width: 100%;
+      height: 100%;
+      background-image: url("../src/assets/images/round_tube.png");
+      position: relative;
+    }
+    .overlay{
+      background-color: #F3E6FF;
+    }
+    
+    .PhoneInputCountryIcon {
+
+      height: 500px;
+      
+    }
+    
+    .PhoneInputCountryIcon--square {
+     }
+    
+    .PhoneInputCountryIcon--border {
+    }
+    
+    .PhoneInputCountryIconImg {
+      display: block;
+      width: 100%;
+      height: 100%;
+      border-radius: 10px;
+    }
+
+    .PhoneInput {
+      height: 40px;
+      padding: 10px;
+    }
+
+    .PhoneInputInput{
+      border-radius: 10px;
+      height: 40px;
+    }
+    .PhoneInput:focus-visible{
+      color: #525866;
+      outline-color: yellow;
+      
+    }
+
+    .PhoneInput--focus{
+      border: 1px solid green ;
+      color: yellow;
+      outline-color: #03b2cb;
+
+    }
+    
+
+    
+
+    .PhoneInputInput:focus-visible {
+      color: #525866;
+      
+    }
+
+     .PhoneInputCountrySelect:focus + .PhoneInputCountryIcon + .PhoneInputCountrySelectArrow {
+      opacity: 1;
+      color: red;
+    }
+    
+    /*/////////////////////////////////Carousel tyles///////////////////////////////////*/
+
+    .carousel-container {
+      /* width: 590px; */
+      width: 100%;
+      height: 100%;
+      position: relative;
+      overflow: hidden;
+      border-radius: 15px;
+    }
+    
+    .carousel-slide {
+      display: none;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      transition: opacity 0.5s ease-in-out;
+    }
+    
+    .carousel-slide.active {
+      display: block;
+    }
+    
+    .carousel-content {
+      position: absolute;
+      bottom: 70px;
+      left: 20px;
+      right: 20px;
+      color: white;
+      padding: 20px;
+      border-radius: 10px;
+    }
+    
+    .carousel-indicators {
+      bottom: 40px;
+     justify-content: center;
+     align-items: center;
+      display: flex;
+      gap: 10px;
+    }
+    
+    .indicator {
+      width: 70px;
+      height: 3px;
+      background: gray;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    
+    .indicator.active {
+      background: white;
+    }
+    
+    
+    /*/////////////////////////////////ChartJsStyles///////////////////////////////////*/
+    /* .chart-container {
+      width: 200px; 
+      height: 100px; 
+    }
+
+    .chart-container canvas {
+      height: 200px;
+    }
+
+    .line-chart-container, canvas {
+      width: 100%; 
+      display: flex;
+      flex-direction: column;
+    } */
+
+
+/* .chart-wrapper {
+  width: 92%;
+} */
+
+.line-chart-container {
+  display: flex;
+  flex: 1;
+  max-width:919px;
+  height: 100%;
+}
+
+
+canvas {
+  width: 90%;
+}
+.chart-container {
+  /* width: 200px;
+  height: 100px; */
+}
+
+.chart-container canvas {
+  /* height: 200px; */
+}
+
+
+    
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+  }
+
+
+
+
