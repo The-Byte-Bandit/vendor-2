@@ -1,11 +1,11 @@
 
-import styles, {typography} from '../style';
-import ExportDataBtn from '../Components/exportDataBtn';
-import AddOrderBtn from '../Components/addOrderBtn';
-import CsearchIcon from '../Components/search'
+import styles, {typography} from '../style.js';
+import ExportDataBtn from '../Components/exportDataBtn.jsx';
+import AddOrderBtn from '../Components/addOrderBtn.jsx';
+import CsearchIcon from '../Components/search.jsx'
 import CinboxIcon from '../Components/inbox.jsx';
-import CnotificationIcon from '../Components/notification';
-import { ordersHeadingMessage} from '../constants/constant';
+import CnotificationIcon from '../Components/notification.jsx';
+import { ordersHeadingMessage} from '../constants/constant.jsx';
 import { Outlet } from 'react-router-dom';
 import DurationBtn from '../Components/durationBtn.jsx';
 import { Link } from 'react-router-dom';
