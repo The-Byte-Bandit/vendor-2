@@ -1,5 +1,5 @@
 
-import SideNav from '../Components/sideNav';
+import SideNav from '../Components/sideNav.jsx';
 import { Outlet } from 'react-router-dom';
 
 function HomeLayout() {
