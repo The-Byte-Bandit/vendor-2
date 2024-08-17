@@ -1,5 +1,5 @@
 
-import TopNav from '../Components/topNav';
+import TopNav from '../Components/topNav.jsx';
 import { Outlet } from 'react-router-dom';
 
 function DashboardLayout() {
