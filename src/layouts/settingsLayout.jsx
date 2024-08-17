@@ -1,11 +1,11 @@
 import  {useState} from 'react'
 import { Outlet } from 'react-router-dom';
-import styles, {typography} from '../style';
-import CsearchIcon from '../Components/search'
+import styles, {typography} from '../style.js';
+import CsearchIcon from '../Components/search.jsx'
 import CinboxIcon from '../Components/inbox.jsx';
-import CnotificationIcon from '../Components/notification';
+import CnotificationIcon from '../Components/notification.jsx';
 import { Link } from 'react-router-dom';
-import { userset, settings_wallet, notification_seticon, privAndsec, arro, settingstHeadingMessage } from '../constants/constant';
+import { userset, settings_wallet, notification_seticon, privAndsec, arro, settingstHeadingMessage } from '../constants/constant.js';
 import { useSelector } from 'react-redux';
 
 function SettingsLayout() {
