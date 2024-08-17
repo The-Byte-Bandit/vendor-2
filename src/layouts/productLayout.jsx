@@ -1,11 +1,11 @@
 import  {useEffect} from 'react'
-import styles, {typography} from '../style';
-import ExportBtn from '../Components/exportBtn';
-import AddProductBtn from '../Components/addProductBtn';
-import CsearchIcon from '../Components/search'
+import styles, {typography} from '../style.js';
+import ExportBtn from '../Components/exportBtn.jsx';
+import AddProductBtn from '../Components/addProductBtn.jsx';
+import CsearchIcon from '../Components/search.jsx'
 import CinboxIcon from '../Components/inbox.jsx';
-import CnotificationIcon from '../Components/notification';
-import { productHeadingMessage, AddProductHeadingMessage } from '../constants/constant';
+import CnotificationIcon from '../Components/notification.jsx';
+import { productHeadingMessage, AddProductHeadingMessage } from '../constants/constant.js';
 import { Outlet } from 'react-router-dom';
 import DurationBtn from '../Components/durationBtn.jsx';
 import { Link, useLocation } from 'react-router-dom';
